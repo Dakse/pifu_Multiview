@@ -158,7 +158,7 @@ def render_prt_ortho(out_path, folder_name, subject_name, shs, rndr, rndr_uv, im
         if file[-8:] == '_new.obj':
             mesh_file = os.path.join(folder_name, file)
     
-        if file[-5:] == 'f.jpg' or file[-5:] == 'f.JPG':
+        if file[-5:] == 'f.jpg' or file[-5:] == 'f.JPG' or file[-5:] == 'A.jpg' or file[-5:] == 'A.JPG':
             text_file = os.path.join(folder_name, file)
         
     if mesh_file =="" or text_file =="":

@@ -72,7 +72,8 @@ def load_obj_mesh(mesh_file, with_normal=False, with_texture=False):
     face_data = []
     face_norm_data = []
     face_uv_data = []
-
+    mtlname = None
+    usemtl = None
     if isinstance(mesh_file, str):
         f = open(mesh_file, "r")
     else:

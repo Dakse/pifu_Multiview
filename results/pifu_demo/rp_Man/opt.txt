@@ -22,7 +22,7 @@
   "resume_epoch": -1,
   "continue_train": false,
   "resolution": 256,
-  "test_folder_path": "./sample_images/data/rp_Man",
+  "test_folder_path": "./sample_images/rp_Man",
   "sigma": 5.0,
   "num_sample_inout": 5000,
   "num_sample_color": 0,

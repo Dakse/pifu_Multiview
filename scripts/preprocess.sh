@@ -1,14 +1,21 @@
-#for entry in ntust/RenderPeople*/*
-#do
-#    python apps/obj.py -i $entry
-#done
 
-#for entry in ntust/G*/*
-#do
-#    python -m apps.prt_util -i $entry
-#done
-
-for entry in ntust/G*/*
+clear
+echo "enter the directory path: \n"
+read directory
+echo "generating models... \n"
+for file in $directory; 
 do
-    python -m apps.render_data -i $entry -o train -e
+    echo $file
+    python -m apps.obj -i $file
 done
+echo "computing spherical harmonics coefficients for precomputed radiance transfer (PRT)... \n"
+for file in $directory
+do
+    python -m apps.prt_util -i $file
+done
+echo "generating training data... \n"
+for file in $directory
+do
+    python -m apps.render_data -i $file -o training_data -e
+done
+echo "Done, ready for training"

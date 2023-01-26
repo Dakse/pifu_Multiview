@@ -28,7 +28,7 @@ class BaseOptions():
         g_train.add_argument('--gpu_id', type=int, default=0, help='gpu id for cuda')
         g_train.add_argument('--gpu_ids', type=str, default='0', help='gpu ids: e.g. 0  0,1,2, 0,2, -1 for CPU mode')
 
-        g_train.add_argument('--num_threads', default=1, type=int, help='# sthreads for loading data')
+        g_train.add_argument('--num_threads', default=2, type=int, help='# sthreads for loading data')
         g_train.add_argument('--serial_batches', action='store_true',
                              help='if true, takes images in order to make batches, otherwise takes them randomly')
         g_train.add_argument('--pin_memory', action='store_true', help='pin_memory')
@@ -108,10 +108,10 @@ class BaseOptions():
         parser.add_argument('--checkpoints_path', type=str, default='./checkpoints', help='path to save checkpoints')
 
         # modify : change model checkpoint if you want to use my pretrain
-        parser.add_argument('--load_netG_checkpoint_path', type=str, default='./checkpoints/net_G', help='path to save checkpoints')
-        parser.add_argument('--load_netC_checkpoint_path', type=str, default='./checkpoints/net_C', help='path to save checkpoints')
-        #parser.add_argument('--load_netG_checkpoint_path', type=str, default='./checkpoints/example/netG_epoch_1', help='path to save checkpoints')
-        #parser.add_argument('--load_netC_checkpoint_path', type=str, default='./checkpoints/example/netC_epoch_2', help='path to save checkpoints')
+        # parser.add_argument('--load_netG_checkpoint_path', type=str, default='./checkpoints/net_G', help='path to save checkpoints')
+        # parser.add_argument('--load_netC_checkpoint_path', type=str, default='./checkpoints/net_C', help='path to save checkpoints')
+        parser.add_argument('--load_netG_checkpoint_path', type=str, default='./checkpoints/example/netG_epoch_1', help='path to save checkpoints')
+        parser.add_argument('--load_netC_checkpoint_path', type=str, default='./checkpoints/example/netC_epoch_2', help='path to save checkpoints')
         #------------------------------------#
         parser.add_argument('--results_path', type=str, default='./results', help='path to save results ply')
         parser.add_argument('--load_checkpoint_path', type=str, help='path to save results ply')

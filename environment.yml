@@ -5,15 +5,17 @@ channels:
 dependencies:
 - opencv
 - pytorch
-- json
-- pyexr
-- cv2
-- PIL
-- skimage
 - tqdm
-- pyembree
 - shapely
 - rtree
 - xxhash
-- trimesh
 - PyOpenGL
+- pip:
+  - skimage
+  - cv2
+  - pyembree
+  - pyexr
+  - trimesh
+  - pil
+  - json
+
