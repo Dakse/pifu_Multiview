@@ -14,7 +14,7 @@ MLP_DIM_COLOR='513 1024 512 256 128 3'
 
 # Reconstruction resolution
 # NOTE: one can change here to reconstruct mesh in a different resolution.
-VOL_RES=256
+VOL_RES=700
 
 CHECKPOINTS_NETG_PATH='./checkpoints/example/netG_epoch_1'
 CHECKPOINTS_NETC_PATH='./checkpoints/example/netC_epoch_2'
